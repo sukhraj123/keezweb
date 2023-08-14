@@ -1,28 +1,5 @@
 
 
-<?php
-$messgae_sent = false;
-if(isset($_POST['email']) && $_POST['email'] !='' ){
-if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL )){
-
-$userName = $_POST['name'];
-$userEmail = $_POST['email'];
-$messageSubject = $_POST['subject'];
-$message = $_POST['message'];
-
-
-$to = "nolimit.grewal@gmail.com";
-$body = "";
-
-$body .= "from:".$userName. "/r/n";
-$body .= "Email:".$userEmail. "/r/n";
-$body .= "Message:".$message. "/r/n";
-
-mail($to,$message,$body);
-$message_sent = true;
-}
-}
-?>
 
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
